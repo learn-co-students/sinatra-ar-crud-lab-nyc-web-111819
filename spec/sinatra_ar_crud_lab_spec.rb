@@ -84,9 +84,9 @@ describe "Magazine App" do
       visit "/articles/#{@article2.id}/edit"
       expect(page.body).to include("#{@article2.title}")
       expect(page.body).to include("#{@article2.content}")
-
+      
     end
-
+    
     it "saves edits to an article" do
       visit "/articles/#{@article2.id}/edit"
       fill_in :title, :with => "Second Article!!"
